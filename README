@@ -1,0 +1,30 @@
+playbookx: a library for writing simple OpenGL applications which are cross platform between RIM's PlayBook Tablet OS and desktop Linux. 
+
+This was written for doing native OpenGL development for the PlayBook while rapidly testing on Linux. The idea is to write cross-platform OpenGL code (with the shared functions between desktop OpenGL and OpenGL ES) using a small library to wrap the platform-specific stuff. There's not much documentation, but a demo program is included in demo.c.
+
+===============================================================================
+Building the demo:
+
+You'll need the BlackBerry Native SDK for Tablet OS 2.0 or later, GLUT developement headers, and libpng development headers.
+
+Run "make" to create a Linux executable.
+
+You'll need to edit some of the variables in Makefile to set the location of your SDK and details about your PlayBook. Run "make PLATFORM=playbook" to create a PlayBook executable, "make barname.bar PLATFORM=playbook" to create a BAR package, and "make deploy PLATFORM=playbook" to install the package on your device.
+
+===============================================================================
+TODO:
+
+ - smoother animation: my frame rate independent animation adds choppiness
+ - text rendering
+ - sound
+ - orientation change
+ - Playbook menu open event
+ - better multitouch support
+ - ???
+
+===============================================================================
+Authors:
+
+Tom Dryer
+RIM (bbutil, and the functions in util.c)
+
